@@ -33,7 +33,7 @@ async function PostUser({userId}) {
       />
         <div className={styles.texts}>
          <span className={styles.title}>Author</span>
-         <span className={styles.username}>{user.name}</span>
+         <span className={styles.username}>{user.username}</span>
       </div>  
     </div>
   )
