@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./singlePost.module.css"
 import Image from 'next/image'
+import PostUser from '@/components/postUser/PostUser'
 
 const getData = async (slug) => {
   const res  = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`)
@@ -25,11 +26,10 @@ async function SinglePostPage({params}) {
       </div>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{post.title}</h1>
-        <div className={styles.detail}>    
-          <div className={styles.detailText}>
-            <span className={styles.detailTitle}>Author</span>
-            <span className={styles.detailValue}>Jerry Mat</span>
-          </div>
+        <div className={styles.detail}>
+
+          <PostUser userId={post.userId}/>
+          
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>21-02-2025</span>
