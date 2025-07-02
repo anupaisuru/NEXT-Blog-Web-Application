@@ -15,6 +15,18 @@ import { getPost } from '@/lib/data';
 //   return res.json();
 // }
 
+//dynamic seo
+export const generateMetadata = async ({params}) => {
+  const {slug} = params;
+
+  const post = await getPost(slug);
+
+  return {
+    title : post.title,
+    description : post.desc,
+  }
+}
+
 async function SinglePostPage({params}) {
 
   const {slug} = params;

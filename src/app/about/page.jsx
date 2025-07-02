@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./about.module.css"
 import Image from 'next/image';
 
+//static seo
 export const metadata = {
   title: "About Page",
   description: "About description",
