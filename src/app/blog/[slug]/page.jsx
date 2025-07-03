@@ -5,15 +5,17 @@ import PostUser from '@/components/postUser/PostUser'
 import { getPost } from '@/lib/data';
 
 //fetch data from api
-// const getData = async (slug) => {
-//   const res  = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`)
+const getData = async (slug) => {
+  const res  = await fetch(`http://localhost:3000/api/blog/${slug}`)
 
-//   if(!res.ok){
-//     throw new Error("something went wrong");
-//   }
+  console.log(res.json)
 
-//   return res.json();
-// }
+  if(!res.ok){
+    throw new Error("something went wrong");
+  }
+
+  return res.json();
+}
 
 //dynamic seo
 export const generateMetadata = async ({params}) => {
@@ -32,10 +34,10 @@ async function SinglePostPage({params}) {
   const {slug} = params;
 
   //fetch data from api
-  //const post = await getData(slug);
+  const post = await getData(slug);
 
   //fetch data from without api
-  const post = await getPost(slug);
+  //const post = await getPost(slug);
 
   return (
     <div className={styles.container}>
