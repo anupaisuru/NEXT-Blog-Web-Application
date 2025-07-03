@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 //static seo
 export const metadata = {
-  title: "About Page",
-  description: "About description",
+  title: "My Blog About Page",
+  description: "About Page",
 };
 
 function AboutPage() {

@@ -3,8 +3,8 @@ import styles from "./contact.module.css"
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Contact Page",
-  description: "Contact description",
+  title: "My Blog Contact Page",
+  description: "My Blog Contact US",
 };
 
 function ContactPage() {

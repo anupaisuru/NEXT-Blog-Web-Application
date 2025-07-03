@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Edu Blogs",
-  description: "Full Stack Web Blog App",
+  title: "My Blogs",
+  description: "My Blogs",
 };
 
 export default function RootLayout({ children }) {
