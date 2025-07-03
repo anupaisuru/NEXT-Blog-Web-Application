@@ -8,7 +8,7 @@ export const handleLogout = async () => {
   await signOut();
 };
 
-export const register = async (formData) => {
+export const register = async (previousState,formData) => {
   const { username, email, password, img, passwordRepeat } = Object.fromEntries(formData);
 
   if (password !== passwordRepeat) {
@@ -42,7 +42,7 @@ export const register = async (formData) => {
   }
 };
 
-export const login = async (formData) => {
+export const login = async (prevState,formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
