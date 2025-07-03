@@ -1,8 +1,14 @@
 import React from 'react'
+import styles from "./login.module.css"
+import LoginForm from '@/components/loginForm/LoginForm'
 
 function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <LoginForm/>
+      </div>
+    </div>
   )
 }
 
